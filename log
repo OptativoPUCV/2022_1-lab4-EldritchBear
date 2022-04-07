@@ -189,3 +189,14 @@ Thu Apr  7 15:47:17 UTC 2022:
  tests:  0|6
 total_score: 0/70
 8c82820
+Thu Apr  7 15:48:39 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   Pair** p->buckets = (Pair **) calloc (capacity,sizeof(Pair *));
+           ^~
+hashmap.c:56:11: error: expected expression before ‘->’ token
+Compilation failed
+ebec24f
