@@ -167,3 +167,14 @@ Thu Apr  7 15:37:01 UTC 2022:
  tests:  0|6
 total_score: 0/70
 fdb42cc
+Thu Apr  7 15:37:56 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:13: error: unused variable ‘p’ [-Werror=unused-variable]
+   HashMap * p = (HashMap*) calloc(capacity,sizeof(HashMap));
+             ^
+cc1: all warnings being treated as errors
+Compilation failed
+cb2203f
