@@ -235,3 +235,14 @@ Thu Apr  7 16:06:31 UTC 2022:
  tests:  1|5
 total_score: 10/70
 6c96621
+Thu Apr  7 16:08:06 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:10: error: ‘HashMap {aka struct HashMap}’ has no member named ‘bucket’; did you mean ‘buckets’?
+     map->bucket[idx]->value = value;
+          ^~~~~~
+          buckets
+Compilation failed
+9de310e
