@@ -51,11 +51,12 @@ void enlarge(HashMap * map) {
 }
 
 
-HashMap * createMap(long capacity) 
-  HashMap *p = (HashMap*) calloc (capacity,sizeof(HashMap));
+HashMap * createMap(long capacity){
   
-  return p;
 }
+  //HashMap *p = (HashMap*) calloc (capacity,sizeof(HashMap));
+  
+  //return p;
 
 void eraseMap(HashMap * map,  char * key) {    
 
