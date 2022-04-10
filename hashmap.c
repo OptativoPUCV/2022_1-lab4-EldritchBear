@@ -84,8 +84,17 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  int idx;
-  idx = map->current;
+  long idx = 0;
+
+  while(map->buckets[idx] == NULL){
+    idx = (idx+1) % map->capacity;
+  }
+  map->current +=1;
+  return map->buckets[idx];
+}
+
+Pair * nextMap(HashMap * map) {
+  long idx = map->current;
   idx = (idx+1) % map->capacity;
   if(idx == 0)return NULL;
   
@@ -94,9 +103,4 @@ Pair * firstMap(HashMap * map) {
   }
   map->current=idx;
   return map->buckets[idx];
-}
-
-Pair * nextMap(HashMap * map) {
-
-    return NULL;
 }
