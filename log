@@ -923,3 +923,14 @@ hashmap.c:57:10: error: unused variable ‘a’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c12d461
+Sun Apr 10 22:39:09 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:3: error: ‘old_buckets’ undeclared (first use in this function)
+   old_buckets[map->size];
+   ^~~~~~~~~~~
+hashmap.c:57:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+15e8857
