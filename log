@@ -496,3 +496,14 @@ Sun Apr 10 21:46:06 UTC 2022:
  tests:  12|3
 total_score: 40/70
 11257d5
+Sun Apr 10 21:51:57 UTC 2022: 
+ hashmap.c | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:76:30: error: statement with no effect [-Werror=unused-value]
+       map->buckets[idx]->key == NULL;
+                              ^
+cc1: all warnings being treated as errors
+Compilation failed
+f64585b
