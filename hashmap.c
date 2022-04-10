@@ -84,7 +84,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  int idx = 0;
+  int idx = 2;
   while(map->buckets[idx]==NULL){
     idx = (idx+1) % map->capacity;
   }
