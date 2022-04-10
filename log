@@ -764,3 +764,30 @@ hashmap.c:61:25: error: ‘*a’ is a pointer; did you mean to use ‘->’?
 cc1: all warnings being treated as errors
 Compilation failed
 dd081b4
+Sun Apr 10 22:30:17 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:28: error: ‘old_buckets’ undeclared (first use in this function)
+   Pair** a = map->buckets (old_buckets);
+                            ^~~~~~~~~~~
+hashmap.c:57:28: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:57:14: error: called object is not a function or function pointer
+   Pair** a = map->buckets (old_buckets);
+              ^~~
+hashmap.c:61:3: error: implicit declaration of function ‘insertmap’; did you mean ‘insertMap’? [-Werror=implicit-function-declaration]
+   insertmap(map, a->key, a->value);
+   ^~~~~~~~~
+   insertMap
+hashmap.c:61:19: error: ‘*a’ is a pointer; did you mean to use ‘->’?
+   insertmap(map, a->key, a->value);
+                   ^~
+                   ->
+hashmap.c:61:27: error: ‘*a’ is a pointer; did you mean to use ‘->’?
+   insertmap(map, a->key, a->value);
+                           ^~
+                           ->
+cc1: all warnings being treated as errors
+Compilation failed
+7c597e0
