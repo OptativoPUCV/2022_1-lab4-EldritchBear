@@ -283,3 +283,14 @@ hashmap.c:79:55: error: ‘p’ undeclared (first use in this function)
 hashmap.c:79:55: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 aab14a0
+Sun Apr 10 21:12:21 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:79:55: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     if(is_equal(key,map->buckets[idx]->key)==1)return idx;
+                                                       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+5263622
