@@ -64,11 +64,12 @@ void enlarge(HashMap * map) {
   
   map->buckets = (Pair **) calloc (map->capacity*2,sizeof(Pair *));
   map->size = 0;
+  map->capacity *= 2;
   
   for(i = 0 ; i < k ; i++){
     insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
   }
-  map->capacity *= 2;
+  
 }
 
 
