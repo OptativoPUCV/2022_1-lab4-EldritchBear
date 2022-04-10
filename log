@@ -443,3 +443,14 @@ hashmap.c:83:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 37f59a9
+Sun Apr 10 21:41:37 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:83:23: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+   return map->current = idx;
+          ~~~~~~~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b1b98d1

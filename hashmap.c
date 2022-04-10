@@ -80,6 +80,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     idx = ((idx+1)%map->capacity);
     map->current = idx;
   }
+  return map->current = idx;
 }
 
 Pair * firstMap(HashMap * map) {
