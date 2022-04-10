@@ -73,7 +73,7 @@ long idx = hash(key,map->capacity);
   while ((map->buckets[idx] != NULL) && (map->buckets[idx]->key != NULL)){
     map->current = idx;
     if(is_equal(key,map->buckets[idx]->key)==1){
-      map->buckets[idx]->key == NULL;
+      map->buckets[idx]->key = NULL;
     }
     //idx = ((idx+1)%map->capacity);
   }
