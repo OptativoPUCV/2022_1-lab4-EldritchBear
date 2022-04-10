@@ -88,7 +88,7 @@ Pair * firstMap(HashMap * map) {
   while(map->buckets[idx]==NULL){
     idx = (idx+1) % map->capacity;
   }
-  map->current=idx
+  map->current=idx;
   return map->buckets[idx];
 }
 
