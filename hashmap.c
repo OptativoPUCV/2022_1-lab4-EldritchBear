@@ -78,14 +78,17 @@ Pair * searchMap(HashMap * map,  char * key) {
   while ((map->buckets[idx] != NULL) && (map->buckets[idx]->key != NULL)){
     if(is_equal(key,map->buckets[idx]->key)==1)return map->buckets[idx];
     idx = ((idx+1)%map->capacity);
-    map->current = map->current + 1;
+    map->current = idx;
   }
     return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
-  int idx = 0;
-  while(map->buckets[idx]==NULL){
+  int idx = map->current;
+  idx = (idx+1) % map->capacity;
+  if(map->current == map->capacity)return NULL;
+  
+  while((map->buckets[idx] == NULL) || map->buckets[idx]->key == NULL){
     idx = (idx+1) % map->capacity;
   }
   map->current=idx;
