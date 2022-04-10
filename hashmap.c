@@ -80,7 +80,6 @@ Pair * searchMap(HashMap * map,  char * key) {
     idx = ((idx+1)%map->capacity);
     map->current = idx;
   }
-    return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
@@ -94,8 +93,7 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  long idx;
-  idx = map->current;
+  long idx = map->current;
   idx = (idx+1) % map->capacity;
   if(idx == 0)return NULL;
   if(map->capacity == map->current)return NULL;
