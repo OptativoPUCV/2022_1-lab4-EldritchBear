@@ -62,7 +62,6 @@ void enlarge(HashMap * map) {
       old_buckets[i] = map->buckets[i];
     }
   map->capacity *= 2;
-  map = createMap(map->capacity);
   map->size = 0;
   //insertMap(map, a->key, a->value);
 }
