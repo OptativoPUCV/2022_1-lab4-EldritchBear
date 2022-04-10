@@ -74,8 +74,10 @@ long idx = hash(key,map->capacity);
     map->current = idx;
     if(is_equal(key,map->buckets[idx]->key)==1){
       map->buckets[idx]->key = NULL;
+      map->size--;
     }
     idx = (idx+1) % map->capacity;
+  }
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
