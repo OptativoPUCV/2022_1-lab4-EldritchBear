@@ -105,7 +105,7 @@ Pair * nextMap(HashMap * map) {
   idx = (idx+1) % map->capacity;
   if(idx == 0)return NULL;
   
-  while((map->buckets[idx] != NULL) || map->buckets[idx]->key != NULL){
+  while((map->buckets[idx] == NULL) || map->buckets[idx]->key == NULL){
     idx = (idx+1) % map->capacity;
   }
   map->current=idx;
