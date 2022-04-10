@@ -58,7 +58,7 @@ void enlarge(HashMap * map) {
   int i;
   int k = map->size;
   
-  Pair **old_buckets[map->size];
+  Pair **old_buckets[map->capacity];
 
   old_buckets = map->buckets;
   
