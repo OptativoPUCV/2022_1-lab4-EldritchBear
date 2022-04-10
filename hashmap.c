@@ -80,6 +80,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     map->current = idx;
     if(is_equal(key,map->buckets[idx]->key)==1)return map->buckets[idx];
   }
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
