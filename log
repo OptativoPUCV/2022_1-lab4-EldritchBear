@@ -454,3 +454,17 @@ hashmap.c:83:23: error: return makes pointer from integer without a cast [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 b1b98d1
+Sun Apr 10 21:42:24 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:84:3: error: expected ‘;’ before ‘return’
+   return map->buckets[idx];
+   ^~~~~~
+hashmap.c:85:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+6095612
