@@ -312,3 +312,25 @@ Sun Apr 10 21:15:07 UTC 2022:
  tests:  6|4
 total_score: 30/70
 4150eb9
+Sun Apr 10 21:18:53 UTC 2022: 
+ hashmap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:81:18: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     map->current = map->buckets[idx];
+                  ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:88:22: error: ‘i’ undeclared (first use in this function)
+   while(map->buckets[i]==NULL){
+                      ^
+hashmap.c:88:22: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:92:3: error: expected ‘;’ before ‘return’
+   return map->buckets[idx];
+   ^~~~~~
+hashmap.c:93:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+f6c44c7
