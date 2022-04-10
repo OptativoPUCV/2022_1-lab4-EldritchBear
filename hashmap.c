@@ -84,7 +84,8 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  int idx = map->current;
+  int idx;
+  idx = map->current;
   idx = (idx+1) % map->capacity;
   if(map->current == map->capacity)return NULL;
   
