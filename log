@@ -1049,3 +1049,21 @@ hashmap.c:65:47: error: request for member ‘value’ in something not a struct
                                                ^~
 Compilation failed
 43a629d
+Sun Apr 10 22:58:40 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:17: error: ‘buckets’ undeclared (first use in this function); did you mean ‘old_buckets’?
+   old_buckets = buckets;
+                 ^~~~~~~
+                 old_buckets
+hashmap.c:60:17: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:65:29: error: request for member ‘key’ in something not a structure or union
+   insertMap(map, old_buckets->key, old_buckets->value);
+                             ^~
+hashmap.c:65:47: error: request for member ‘value’ in something not a structure or union
+   insertMap(map, old_buckets->key, old_buckets->value);
+                                               ^~
+Compilation failed
+2e8c62b
