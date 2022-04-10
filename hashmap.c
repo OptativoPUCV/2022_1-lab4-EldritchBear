@@ -94,7 +94,8 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  long idx = map->current;
+  long idx;
+  idx = map->current;
   idx = (idx+1) % map->capacity;
   if(idx == 0)return NULL;
   if(map->capacity == map->current)return NULL;
