@@ -987,3 +987,17 @@ hashmap.c:59:10: error: variable ‘old_buckets’ set but not used [-Werror=unu
 cc1: all warnings being treated as errors
 Compilation failed
 dee24da
+Sun Apr 10 22:56:57 UTC 2022: 
+ hashmap.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:15: error: assignment to expression with array type
+   old_buckets = map->buckets;
+               ^
+hashmap.c:58:10: error: variable ‘old_buckets’ set but not used [-Werror=unused-but-set-variable]
+   Pair **old_buckets[map->size];
+          ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4f65267
