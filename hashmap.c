@@ -58,7 +58,7 @@ void enlarge(HashMap * map) {
   map->capacity *= 2;
   map = createMap(map->capacity);
   map->size = 0;
-  insertmap(map, a->key, a->value);
+  insertMap(map, a->key, a->value);
 }
 
 
