@@ -879,3 +879,22 @@ hashmap.c:61:27: error: ‘*a’ is a pointer; did you mean to use ‘->’?
                            ->
 Compilation failed
 c5115fc
+Sun Apr 10 22:36:39 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:57:14: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   Pair** a = (Pair *)malloc(sizeof(Pair));
+              ^
+hashmap.c:61:19: error: ‘*a’ is a pointer; did you mean to use ‘->’?
+   insertMap(map, a->key, a->value);
+                   ^~
+                   ->
+hashmap.c:61:27: error: ‘*a’ is a pointer; did you mean to use ‘->’?
+   insertMap(map, a->key, a->value);
+                           ^~
+                           ->
+cc1: all warnings being treated as errors
+Compilation failed
+5d2a756
