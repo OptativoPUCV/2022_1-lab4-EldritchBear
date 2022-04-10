@@ -1085,3 +1085,19 @@ hashmap.c:65:47: error: request for member ‘value’ in something not a struct
                                                ^~
 Compilation failed
 1e088cf
+Sun Apr 10 22:59:29 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:15: error: assignment to expression with array type
+   old_buckets = map->buckets;
+               ^
+hashmap.c:65:29: error: request for member ‘key’ in something not a structure or union
+   insertMap(map, old_buckets->key, old_buckets->value);
+                             ^~
+hashmap.c:65:47: error: request for member ‘value’ in something not a structure or union
+   insertMap(map, old_buckets->key, old_buckets->value);
+                                               ^~
+Compilation failed
+ccf3acf
