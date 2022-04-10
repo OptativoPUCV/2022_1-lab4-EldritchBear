@@ -258,3 +258,17 @@ Thu Apr  7 16:13:03 UTC 2022:
  tests:  5|4
 total_score: 30/70
 2acf667
+Sun Apr 10 21:11:29 UTC 2022: 
+ hashmap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:79:48: error: ‘return’ with no value, in function returning non-void [-Werror]
+     if(is_equal(key,map->buckets[idx]->key)==1)return;
+                                                ^~~~~~
+hashmap.c:76:8: note: declared here
+ Pair * searchMap(HashMap * map,  char * key) {
+        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0ed3984
