@@ -744,3 +744,23 @@ hashmap.c:61:25: error: ‘*a’ is a pointer; did you mean to use ‘->’?
 cc1: all warnings being treated as errors
 Compilation failed
 c4ce8d4
+Sun Apr 10 22:27:32 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:61:3: error: implicit declaration of function ‘insertmap’; did you mean ‘insertMap’? [-Werror=implicit-function-declaration]
+   insertmap(map,a->key,a->value);
+   ^~~~~~~~~
+   insertMap
+hashmap.c:61:18: error: ‘*a’ is a pointer; did you mean to use ‘->’?
+   insertmap(map,a->key,a->value);
+                  ^~
+                  ->
+hashmap.c:61:25: error: ‘*a’ is a pointer; did you mean to use ‘->’?
+   insertmap(map,a->key,a->value);
+                         ^~
+                         ->
+cc1: all warnings being treated as errors
+Compilation failed
+dd081b4
