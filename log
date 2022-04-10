@@ -671,3 +671,30 @@ hashmap.c:57:10: error: unused variable ‘a’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ee75da2
+Sun Apr 10 22:26:13 UTC 2022: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:16: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+   map->buckets =
+                ^
+hashmap.c:61:3: error: implicit declaration of function ‘insertmap’; did you mean ‘insertMap’? [-Werror=implicit-function-declaration]
+   insertmap(key,value);
+   ^~~~~~~~~
+   insertMap
+hashmap.c:61:13: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   insertmap(key,value);
+             ^~~
+             key_t
+hashmap.c:61:13: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:61:17: error: ‘value’ undeclared (first use in this function); did you mean ‘valloc’?
+   insertmap(key,value);
+                 ^~~~~
+                 valloc
+hashmap.c:57:10: error: unused variable ‘a’ [-Werror=unused-variable]
+   Pair** a = map->buckets;
+          ^
+cc1: all warnings being treated as errors
+Compilation failed
+a4f6aea
