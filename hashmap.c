@@ -76,12 +76,10 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
   long idx = hash(key,map->capacity);
   while ((map->buckets[idx] != NULL) && (map->buckets[idx]->key != NULL)){
-    if(is_equal(key,map->buckets[idx]->key)==1)return map->buckets[idx];
     idx = ((idx+1)%map->capacity);
     map->current = idx;
+    if(is_equal(key,map->buckets[idx]->key)==1)return map->buckets[idx];
   }
-  map->current = idx;
-  return map->buckets[idx];
 }
 
 Pair * firstMap(HashMap * map) {
