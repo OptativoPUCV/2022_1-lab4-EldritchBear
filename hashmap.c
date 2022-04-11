@@ -56,7 +56,6 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
   long i;
-  int k = map->size;
   
   Pair **old_buckets[map->capacity];
 
@@ -66,7 +65,7 @@ void enlarge(HashMap * map) {
   map->size = 0;
   map->capacity *= 2;
   
-  for(i = 0 ; i < k ; i++){
+  for(i = 0 ; i < map->capacity ; i++){
     insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
   }
   

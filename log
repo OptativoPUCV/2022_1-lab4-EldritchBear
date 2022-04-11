@@ -1191,3 +1191,21 @@ hashmap.c:70:55: error: ‘*old_buckets[i]’ is a pointer; did you mean to use 
                                                        ->
 Compilation failed
 0aa88ee
+Mon Apr 11 00:11:19 UTC 2022: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:15: error: assignment to expression with array type
+   old_buckets = map->buckets;
+               ^
+hashmap.c:69:34: error: ‘*old_buckets[i]’ is a pointer; did you mean to use ‘->’?
+     insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+                                  ^~
+                                  ->
+hashmap.c:69:55: error: ‘*old_buckets[i]’ is a pointer; did you mean to use ‘->’?
+     insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+                                                       ^~
+                                                       ->
+Compilation failed
+d6e8192
