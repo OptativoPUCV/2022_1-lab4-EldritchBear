@@ -1378,3 +1378,27 @@ Mon Apr 11 01:20:59 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 afb613f
+Mon Apr 11 01:21:36 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:28: error: too few arguments to function ‘calloc’
+   map->buckets = (Pair **) calloc (map->capacity),sizeof(Pair *));
+                            ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:62:50: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   map->buckets = (Pair **) calloc (map->capacity),sizeof(Pair *));
+                                                  ^
+hashmap.c:62:50: error: statement with no effect [-Werror=unused-value]
+hashmap.c:62:65: error: expected ‘;’ before ‘)’ token
+   map->buckets = (Pair **) calloc (map->capacity),sizeof(Pair *));
+                                                                 ^
+hashmap.c:62:65: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+6d09183
