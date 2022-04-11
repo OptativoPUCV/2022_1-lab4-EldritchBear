@@ -1353,3 +1353,8 @@ hashmap.c:68:55: error: ‘*old_buckets[i]’ is a pointer; did you mean to use 
                                                        ->
 Compilation failed
 b23b398
+Mon Apr 11 01:12:07 UTC 2022: 
+ hashmap.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+ tests:  0|0
+35c748c
