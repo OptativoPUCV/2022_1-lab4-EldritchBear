@@ -1427,3 +1427,15 @@ Mon Apr 11 01:33:05 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 568a3c0
+Mon Apr 11 01:35:55 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:25: error: ‘null’ undeclared (first use in this function); did you mean ‘nanl’?
+     if (map->buckets != null && old_buckets[i] != null){
+                         ^~~~
+                         nanl
+hashmap.c:66:25: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+81cfbe5
